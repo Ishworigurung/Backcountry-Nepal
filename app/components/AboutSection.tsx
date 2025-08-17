@@ -29,8 +29,8 @@ const AboutSection: React.FC = () => {
           Backcountry Nepal
         </h2>
         <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-2 sm:px-0 ">
-          Nepal's backcountry is a land of hidden valleys, untouched trails,
-          and raw Himalayan beauty. It's where adventure seekers find true
+          Nepal&apos;t backcountry is a land of hidden valleys, untouched trails,
+          and raw Himalayan beauty. It&apos;s where adventure seekers find true
           freedom beyond the beaten paths — a journey into the wild heart of
           the mountains.
         </p>

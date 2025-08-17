@@ -1,22 +1,21 @@
 "use client";
 import React, { FC } from "react";
-import { Facebook, Instagram, MessageCircle } from "lucide-react"; // ✅ Replaced Twitter with WhatsApp
+import { Facebook, Instagram, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
-interface FooterProps {}
-
-const Footer: FC<FooterProps> = () => {
+const Footer: FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-10">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         
         {/* Logo and Branding */}
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white">
-            {/* Replace src with your actual logo */}
-            <img
+          <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center">
+            <Image
               src="/images/logo1.png"
               alt="Backcountry Nepal Logo"
-              className="w-full h-full object-contain"
+              fill
+              className="object-contain"
             />
           </div>
           <span className="text-xl font-semibold">Backcountry Nepal</span>

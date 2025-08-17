@@ -6,9 +6,7 @@ export default function VisionSection() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640); // Tailwind "sm" breakpoint
-    };
+    const handleResize = () => setIsMobile(window.innerWidth < 640); // Tailwind "sm"
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -27,13 +25,13 @@ export default function VisionSection() {
         <motion.h2
           initial={isMobile ? { opacity: 0, scale: 0.8 } : { opacity: 0, y: -50 }}
           whileInView={isMobile ? { opacity: 1, scale: 1 } : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: isMobile ? "easeOut" : "easeOut", bounce: isMobile ? 0.4 : 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", bounce: isMobile ? 0.4 : 0 }}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 ArchivoBlack"
         >
           Our Vision
         </motion.h2>
 
-        {/* Divider line */}
+        {/* Divider */}
         <motion.div
           initial={isMobile ? { width: 0, opacity: 0 } : { opacity: 0 }}
           whileInView={isMobile ? { width: "4rem", opacity: 1 } : { opacity: 1 }}
@@ -48,9 +46,7 @@ export default function VisionSection() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="text-base sm:text-lg md:text-xl leading-relaxed max-w-xl sm:max-w-2xl mx-auto px-2"
         >
-          At <span className="font-semibold text-blue-300">Backcountry Nepal</span>, 
-          we aim to bring adventure seekers closer to the raw beauty of the Himalayas. 
-          Our Snowboarding in Kashmir package is designed to blend{" "}
+          At <span className="font-semibold text-blue-300">Backcountry Nepal</span>, we aim to bring adventure seekers closer to the raw beauty of the Himalayas. Our Snowboarding in Kashmir package is designed to blend{" "}
           <span className="font-semibold text-white">adrenaline</span>,{" "}
           <span className="font-semibold text-white">nature</span>, and{" "}
           <span className="font-semibold text-white">culture</span> for an unforgettable journey.

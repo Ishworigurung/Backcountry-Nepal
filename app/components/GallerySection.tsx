@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function GallerySection() {
   const images = [
@@ -50,14 +51,10 @@ export default function GallerySection() {
             const total = images.length;
             let relativePos = (i - centerIndex + total) % total;
 
-            // Wrap positions so the closest path is chosen
-            if (relativePos > total / 2) {
-              relativePos -= total;
-            }
+            if (relativePos > total / 2) relativePos -= total;
 
-            // Spread parameters
-            const xOffset = relativePos * 180; // horizontal gap
-            const yOffset = Math.abs(relativePos) * 15; // slight vertical lift
+            const xOffset = relativePos * 180;
+            const yOffset = Math.abs(relativePos) * 15;
             const scale = 1 - Math.abs(relativePos) * 0.1;
             const rotate = relativePos * 12;
             const opacity = Math.max(1 - Math.abs(relativePos) * 0.3, 0);
@@ -85,9 +82,11 @@ export default function GallerySection() {
                   height: relativePos === 0 ? 320 : 240,
                 }}
               >
-                <img
+                <Image
                   src={img}
-                  className="w-full h-full object-cover"
+                  alt={`Gallery image ${i + 1}`}
+                  fill
+                  className="object-cover"
                   draggable={false}
                 />
               </motion.div>

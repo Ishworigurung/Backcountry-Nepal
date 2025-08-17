@@ -31,7 +31,7 @@ const Page: React.FC = () => {
         <LandingIntro onFinish={() => setShowIntro(false)} />
       ) : (
         <>
-          <Navbar />
+          <Navbar videoEnded={!showIntro} />
           <HeroBanner />
           <AboutSection />
           <PackageHighlights />
