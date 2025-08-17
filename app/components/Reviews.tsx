@@ -81,7 +81,7 @@ export default function Reviews() {
                 </div>
 
                 <p className="text-gray-700 italic mb-6 text-center leading-relaxed text-base">
-                  "{reviews[index].text}"
+                  &quot;{reviews[index].text}&quot;
                 </p>
 
                 <h4 className="font-semibold text-center text-gray-900 text-lg">
@@ -113,7 +113,7 @@ export default function Reviews() {
                   type: "spring",
                   stiffness: 400,
                   damping: 20,
-                  duration: 0.3, // ⚡ fast zoom
+                  duration: 0.3,
                 }}
                 className="relative p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/40 cursor-pointer"
               >
@@ -131,7 +131,7 @@ export default function Reviews() {
                 </div>
 
                 <p className="text-gray-700 italic mb-6 text-center leading-relaxed text-base">
-                  "{r.text}"
+                  &quot;{r.text}&quot;
                 </p>
 
                 <h4 className="font-semibold text-center text-gray-900 text-lg">
@@ -151,7 +151,7 @@ export default function Reviews() {
                   scale: i === index ? 1.4 : 1,
                   backgroundColor: i === index ? "#a855f7" : "#d1d5db",
                 }}
-                transition={{ duration: 0.12, ease: "easeOut" }} // ⚡ even faster dot change
+                transition={{ duration: 0.12, ease: "easeOut" }}
                 className="w-3 h-3 rounded-full"
               />
             ))}
