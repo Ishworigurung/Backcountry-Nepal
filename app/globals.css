@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+
+:root {
+    --background: #ffffff;
+    --foreground: red;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --color-white-bg: #EEEDED;
+    --color-primary-text: #272727;
+    --color-secondary-text: #898785;
+    --color-accent: #FC6A6A
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #272727;
+        --foreground: #ededed;
+    }
+}
+
+
+
+@font-face {
+    font-family: "DMSerifText";
+    src: url("/fonts/DMSerifText-Regular.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeue-Regular.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ArchivoBlack";
+    src: url("/fonts/ArchivoBlack.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+   
+    font-family: "Manrope", Helvetica, Arial, sans-serif;
+}
+
+.DMSerifText{
+       font-family: "DMSerifText", sans-serif;
+}
+
+.BebasNeue{
+       font-family: "BebasNeue", sans-serif;
+}
+
+.ArchivoBlack{
+       font-family: "ArchivoBlack", sans-serif;
+}
